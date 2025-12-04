@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost',
+        target: 'https://taskflow-50qt.onrender.com',
         changeOrigin: true
       }
     }

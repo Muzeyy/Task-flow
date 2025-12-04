@@ -20,7 +20,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: ["https://taskflow-50qt.onrender.com", "http://localhost:3000"],
+  origin: ["https://taskflow-50qt.onrender.com"],
   credentials: true
 }));
 
@@ -47,7 +47,7 @@ app.use('/api/users', require('./routes/userRoutes'));
 // Error Handling Middleware
 app.use(require('./middlewares/errorMiddleware'));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`Swagger Docs: https://task-flow-backend-bkwm.onrender.com/api-docs
