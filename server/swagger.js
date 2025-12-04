@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:5000",
+        url: "https://task-flow-backend-bkwm.onrender.com",
       },
     ],
   },
@@ -23,7 +23,7 @@ const swaggerSpec = swaggerJsdoc(options);
 
 function swaggerDocs(app) {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-  console.log("📘 Swagger Docs running at: http://localhost:5000/api-docs");
+  console.log("📘 Swagger Docs running at: : https://task-flow-backend-bkwm.onrender.com/api-docs");
 }
 
 module.exports = swaggerDocs;
